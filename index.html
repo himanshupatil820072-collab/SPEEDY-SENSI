@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>⚡ SPEEDY SENSI GENERATOR | Free Fire</title>
+
+<style>
+:root{--bg:#0b0d14;--card:#151926;--line:#262c40;--tx:#eef1fa;--mut:#8f98b5;--ac:#ff6a1a;--ac2:#ffb347;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#f4f5fa;--card:#fff;--line:#dde0ec;--tx:#14182b;--mut:#5e6685}}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;line-height:1.5}
+.w{max-width:1000px;margin:0 auto;padding:16px}
+header{text-align:center;padding:28px 0 12px}
+h1{margin:0;font-size:clamp(24px,5vw,38px);background:linear-gradient(90deg,var(--ac),var(--ac2));-webkit-background-clip:text;background-clip:text;color:transparent}
+header p{color:var(--mut);margin:6px 0 0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px;margin:14px 0}
+.tabs{display:flex;gap:8px;flex-wrap:wrap}
+.tab{flex:1;min-width:80px;padding:10px;border-radius:10px;border:1px solid var(--line);background:transparent;color:var(--tx);font-weight:600;cursor:pointer}
+.tab.on{background:linear-gradient(90deg,var(--ac),var(--ac2));color:#111;border-color:transparent}
+.g{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-top:12px}
+label{font-size:12px;color:var(--mut);display:block;margin-bottom:4px}
+select,input{width:100%;padding:10px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--tx);font-size:15px}
+.btn{width:100%;margin-top:14px;padding:13px;border:0;border-radius:12px;background:linear-gradient(90deg,var(--ac),var(--ac2));color:#111;font-weight:800;font-size:16px;cursor:pointer}
+.btn.s{width:auto;padding:8px 14px;font-size:13px;margin:0}
+.res h2{margin:0 0 4px;font-size:20px}
+.sub{color:var(--mut);font-size:13px;margin-bottom:12px}
+.row{margin:10px 0}
+.row div.t{display:flex;justify-content:space-between;font-size:14px;margin-bottom:4px}
+.bar{height:8px;background:var(--line);border-radius:8px;overflow:hidden}
+.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--ac),var(--ac2));border-radius:8px}
+.tips{margin:0;padding-left:18px;color:var(--mut);font-size:14px}
+.tw{overflow-x:auto;margin-top:10px}
+table{border-collapse:collapse;width:100%;min-width:620px;font-size:13px}
+th,td{padding:8px;border-bottom:1px solid var(--line);text-align:center}
+th:first-child,td:first-child{text-align:left}
+th{color:var(--mut);font-weight:600;position:sticky;top:0;background:var(--card)}
+tr.c{cursor:pointer}
+tr.c:hover{background:var(--bg)}
+.note{font-size:12px;color:var(--mut);text-align:center;padding:10px 0 30px}
+.hide{display:none}
+.res:not(.hide){animation:fadeIn .25s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.bar i{width:0;transition:width .7s ease}
+.chips{display:flex;gap:6px;flex-wrap:wrap}
+.chip{background:var(--bg);border:1px solid var(--line);border-radius:20px;padding:3px 10px;font-size:12px}
+.chip.a{border-color:var(--ac);color:var(--ac2)}
+.stats{display:flex;justify-content:center;gap:22px;margin-top:14px;color:var(--mut);font-size:13px}
+.stats b{color:var(--ac2);font-size:20px;display:block}
+.fg{display:grid;grid-template-columns:2fr 1fr 1fr;gap:8px}
+@media(max-width:560px){.fg{grid-template-columns:1fr 1fr}.fg input{grid-column:1/3}}
+input[type=range]{padding:0;accent-color:var(--ac);height:36px}
+.acts{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+
+body{overflow-x:hidden;background:radial-gradient(circle at 50% -10%,#2a1b12 0%,var(--bg) 42%)}
+.hero{position:relative;text-align:center;padding:42px 0 18px}
+.hero:before{content:"";position:absolute;width:220px;height:220px;left:50%;top:0;transform:translateX(-50%);background:var(--ac);filter:blur(90px);opacity:.13;pointer-events:none}
+.logo-badge{display:inline-block;padding:6px 14px;border:1px solid rgba(255,179,71,.35);border-radius:999px;background:rgba(255,106,26,.08);color:var(--ac2);font-size:12px;font-weight:900;letter-spacing:2px;animation:pulse 2.2s infinite}
+.hero h1{margin:12px 0 5px;font-size:clamp(30px,8vw,54px);font-weight:950;letter-spacing:-1.5px;text-shadow:0 0 28px rgba(255,106,26,.18)}
+.hero h1 span{background:linear-gradient(90deg,#ff6a1a,#ffd166,#ff6a1a);background-size:200%;-webkit-background-clip:text;color:transparent;animation:shine 3s linear infinite}
+.hero h1 strong{display:inline-block}
+.hero-sub{margin:8px 0 0!important;color:var(--tx)!important;font-weight:650;font-size:15px}
+.hero-line{width:90px;height:3px;margin:14px auto 9px;border-radius:5px;background:linear-gradient(90deg,transparent,var(--ac2),transparent);animation:lineGlow 2s infinite}
+.brands{margin:0!important;font-size:12px!important;color:var(--mut)}
+
+.insta-follow{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+gap:8px;
+margin-top:14px;
+padding:10px 18px;
+border-radius:999px;
+text-decoration:none;
+color:#fff;
+font-weight:800;
+font-size:13px;
+letter-spacing:.2px;
+background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045);
+box-shadow:0 8px 24px rgba(253,29,29,.22);
+transition:transform .2s ease,box-shadow .2s ease;
+}
+
+.insta-follow:hover{
+transform:translateY(-2px) scale(1.02);
+box-shadow:0 12px 30px rgba(253,29,29,.32);
+}
+
+.insta-follow:active{transform:scale(.97)}
+
+.card{box-shadow:0 10px 35px rgba(0,0,0,.18);transition:transform .25s ease,box-shadow .25s ease}
+.card:hover{transform:translateY(-2px);box-shadow:0 14px 42px rgba(255,106,26,.09)}
+.btn{position:relative;overflow:hidden;box-shadow:0 8px 24px rgba(255,106,26,.18);transition:transform .18s,box-shadow .18s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(255,106,26,.3)}
+.btn:active{transform:scale(.98)}
+.btn:after{content:"";position:absolute;inset:0;transform:translateX(-110%);background:linear-gradient(90deg,transparent,rgba(255,255,255,.28),transparent);animation:sweep 3.5s infinite}
+.tab{transition:.2s}
+.tab:hover{transform:translateY(-1px);border-color:var(--ac)}
+@keyframes shine{to{background-position:200% center}}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(255,106,26,.15)}50%{box-shadow:0 0 0 8px rgba(255,106,26,0)}}
+@keyframes lineGlow{0%,100%{opacity:.55;transform:scaleX(.75)}50%{opacity:1;transform:scaleX(1.15)}}
+@keyframes sweep{0%,65%{transform:translateX(-110%)}85%,100%{transform:translateX(110%)}}
+@media(max-width:560px){
+.hero{padding-top:32px}
+.hero h1{line-height:1.05}
+.hero h1 strong{display:block}
+.hero-sub{font-size:13px}
+.brands{font-size:11px!important}
+}
+</style>
+</head>
+
+<body>
+<div class="w">
+
+<header class="hero">
+<div class="logo-badge">⚡ SPEEDY</div>
+
+<h1><span>⚡ SPEEDY</span> SENSI <strong>GENERATOR</strong></h1>
+
+<p class="hero-sub">🎯 Headshot-ready sensitivity • Smartly tuned for your device</p>
+
+<div class="hero-line"></div>
+
+<p class="brands">Vivo • Realme • Oppo • OnePlus &nbsp; | &nbsp; Model + RAM Based</p>
+
+<a class="insta-follow" href="https://www.instagram.com/imspeedy.ff?stkn=MXNkMmkya29hcXR0dw==" target="_blank" rel="noopener noreferrer">
+📸 Follow @imspeedy.ff
+</a>
+
+<div class="stats" id="st"></div>
+</header>
+
+<div class="card">
+<div class="tabs" id="tabs"></div>
+
+<div class="g">
+<div>
+<label>Phone Model</label>
+<select id="model"></select>
+</div>
+
+<div>
+<label>RAM</label>
+<select id="ram"></select>
+</div>
+
+<div>
+<label>Play Style</label>
+<select id="style">
+<option value="3">Aggressive (rush)</option>
+<option value="0" selected>Balanced</option>
+<option value="-4">Control (long range)</option>
+</select>
+</div>
+</div>
+
+<button class="btn" id="go">Sensitivity Generate Karo</button>
+</div>
+
+<div class="card res hide" id="res" aria-live="polite">
+<h2 id="rt"></h2>
+<div class="sub" id="rs"></div>
+<div id="rows"></div>
+
+<div class="acts">
+<button class="btn s" id="copy">📋 Copy Settings</button>
+<button class="btn s" id="wa">📲 WhatsApp Share</button>
+</div>
+</div>
+
+<div class="card">
+<h2 style="margin:0 0 8px;font-size:18px">⚙️ Extra Tips</h2>
+<ul class="tips" id="tips"></ul>
+</div>
+
+<div class="card">
+<h2 style="margin:0 0 8px;font-size:18px">📱 Sabhi Models ki Sensitivity</h2>
+
+<div class="fg">
+<input id="q" placeholder="Model search (Y27, Narzo, Reno…)">
+
+<select id="fb">
+<option value="">All Brands</option>
+<option>Vivo</option>
+<option>Realme</option>
+<option>Oppo</option>
+<option>OnePlus</option>
+</select>
+
+<select id="fr">
+<option value="">All RAM</option>
+<option>4</option>
+<option>6</option>
+<option>8</option>
+<option>12</option>
+<option>16</option>
+</select>
+</div>
+
+<div class="tw">
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>RAM</th>
+<th>General</th>
+<th>Red Dot</th>
+<th>2x</th>
+<th>4x</th>
+<th>AWM</th>
+<th>Free Look</th>
+</tr>
+</thead>
+<tbody id="tb"></tbody>
+</table>
+</div>
+
+<div class="sub" style="margin-top:8px">
+Row par click karo to upar generate ho jayega.
+</div>
+</div>
+
+<div class="note">
+Ye values model ki RAM, refresh rate aur tier ke hisaab se bani recommended starting points hain.
+Free Fire official per-phone sensitivity nahi deta, isliye 2-3 match mein thoda adjust zaroor karo.
+Ye website Garena se affiliated nahi hai.
+</div>
+
+</div>
+
+<script>
+const RAW={
+Vivo:"Y12|3,4|60;Y20|4,6|60;Y21|4|60;Y22|4,6|90;Y27|6,8|90;Y28 5G|4,6,8|90;Y36|8|90;Y56 5G|8|90;Y100|8,12|120;Y200|8|120;V20|8|60;V23 5G|8,12|90;V25 Pro|8,12|90;V27|8,12|120;V29|8,12|120;V30|8,12|120;V40|8,12|120;V50|8,12|120;T2 5G|6,8|90;T3 5G|6,8|120;T3 Pro|8|120;X80 Pro|12|120;X100|12,16|120",
+
+Realme:"C11|2,4|60;C21Y|3,4|60;C25|4|60;C33|4|60;C35|4|60;C53|6,8|90;C55|6,8|90;C65|6,8|90;Narzo 50A|4|60;Narzo 50|4,6|90;Narzo 60|8|90;Narzo 60 Pro|8,12|120;Narzo 70 Pro|8|120;8 Pro|6,8|60;9 Pro|6,8|120;10 Pro+|8,12|120;11 Pro|8|120;11x|6,8|120;12 Pro|8,12|120;12+|8|120;13 Pro+|8,12|120;GT Neo 3|8,12|120;GT 6T|8,12|120;GT 6|12,16|120",
+
+Oppo:"A17|4|60;A38|4,6|90;A57|4,6|90;A58|6,8|90;A78|8|90;A79 5G|8|90;A96|8|90;F19 Pro|8|90;F21 Pro|8|90;F23 5G|8|90;F25 Pro|8|120;F27 Pro+|8|120;Reno 6|8|90;Reno 8|8|90;Reno 10|8|120;Reno 11|8,12|120;Reno 12|8,12|120;Find X5 Pro|12|120;Find N3 Flip|12|120",
+
+OnePlus:"Nord N20|6|60;Nord N30|8|120;Nord CE 2 Lite|6,8|120;Nord CE 3 Lite|8|120;Nord CE 3|8,12|120;Nord CE 4 Lite|8|120;Nord CE 4|8|120;Nord 2|8,12|90;Nord 2T|8,12|90;Nord 3|8,16|120;Nord 4|8,12,16|120;8T|8,12|120;9|8,12|120;9R|8,12|120;10R|8,12|120;10 Pro|8,12|120;11|8,16|120;12R|8,16|120;12|12,16|120;13|12,16|120"
+};
+
+const DATA={};
+
+for(const b in RAW)
+DATA[b]=RAW[b].split(";").map(s=>{
+const p=s.split("|");
+const r=p[1].split(",").map(Number),mx=Math.max(...r);
+return{
+n:p[0],
+r:[...new Set([...r,...(mx>=4?[6]:[]),...(mx>=8?[12]:[])])].sort((a,b)=>a-b),
+h:+p[2]
+};
+});
+
+const BASE=[
+[198,185,178,170,160,125],
+[168,150,142,135,128,105],
+[178,160,152,144,136,110],
+[188,170,162,154,146,115]
+];
+
+const KEYS=["General","Red Dot","2x Scope","4x Scope","AWM Scope","Free Look"];
+
+let brand="Vivo",last=null;
+
+const $=id=>document.getElementById(id);
+
+function hash(s){
+let h=0;
+for(const c of s)h=(h*31+c.charCodeAt(0))>>>0;
+return h;
+}
+
+function calc(b,m,ram,st){
+const t=ram<=4?0:ram<=6?1:ram<=8?2:3;
+const adj=-Math.round((m.h-60)/30);
+const off=hash(b+m.n+ram)%5-2;
+
+const lim=i=>
+i==0?(t==0?[190,200]:[160,195]):
+i==5?[80,160]:
+[120,185];
+
+return BASE[t].map((v,i)=>{
+const s=i<5?st*2:st;
+const[l,h]=lim(i);
+return Math.max(l,Math.min(h,Math.round(v+adj+off+s)));
+});
+}
+
+function tier(ram,hz){
+return ram<=4?"Budget":
+ram<=6?"Mid-range":
+ram<=8?"Upper mid":"Flagship";
+}
+
+function tabs(){
+$("tabs").innerHTML=Object.keys(DATA).map(b=>
+`<button class="tab ${b==brand?"on":""}" data-b="${b}">${b}</button>`
+).join("");
+}
+
+function models(){
+$("model").innerHTML=DATA[brand].map((m,i)=>
+`<option value="${i}">${brand} ${m.n}</option>`
+).join("");
+
+rams();
+}
+
+function rams(){
+const m=DATA[brand][$("model").value];
+
+$("ram").innerHTML=m.r.map(r=>
+`<option>${r}</option>`
+).join("");
+}
+
+function show(b,m,ram,ns){
+const st=+$("style").value;
+const v=calc(b,m,ram,st);
+
+last={b,m,ram,v};
+
+$("rt").textContent=`${b} ${m.n} • ${ram}GB RAM`;
+
+$("rs").innerHTML=
+`<div class="chips">
+<span class="chip a">${ram}GB RAM</span>
+<span class="chip">${m.h}Hz</span>
+<span class="chip">${tier(ram,m.h)}</span>
+<span class="chip">${$("style").selectedOptions[0].text}</span>
+</div>`;
+
+$("rows").innerHTML=KEYS.map((k,i)=>
+`<div class="row">
+<div class="t">
+<span>${k}</span>
+<b>${v[i]}</b>
+</div>
+<div class="bar">
+<i data-w="${v[i]}"></i>
+</div>
+</div>`
+).join("");
+
+const f=
+ram<=4?
+"Fire button size 45-55%, graphics Smooth, FPS High":
+ram<=6?
+"Fire button size 50-60%, graphics Smooth/Standard, FPS High":
+ram<=8?
+"Fire button size 55-65%, graphics Standard, FPS High/Max":
+"Fire button size 55-70%, graphics Ultra/Max, FPS Max";
+
+$("tips").innerHTML=[
+f,
+"3-finger ya 4-finger claw layout use karo, headshot ke liye fire button thumb ke aas-paas rakho",
+"Game Booster / Gaming Mode on karo aur background apps band rakho",
+"Touch sampling ya screen protector check karo, thick guard se drag slow hota hai",
+"Training Ground mein 10 min practice ke baad sensi 2-3 points upar/neeche tune karo"
+].map(t=>`<li>${t}</li>`).join("");
+
+$("res").classList.remove("hide");
+
+requestAnimationFrame(()=>
+requestAnimationFrame(()=>
+document.querySelectorAll("#rows i").forEach(i=>
+i.style.width=i.dataset.w/2+"%"
+)));
+
+if(!ns)
+$("res").scrollIntoView({behavior:"smooth",block:"start"});
+}
+
+function table(){
+const q=$("q").value.toLowerCase();
+const st=+$("style").value;
+let h="";
+
+for(const b in DATA)
+DATA[b].forEach((m,mi)=>
+m.r.forEach(r=>{
+
+if(
+(b+" "+m.n).toLowerCase().includes(q)&&
+(!$("fb").value||$("fb").value==b)&&
+(!$("fr").value||+$("fr").value==r)
+){
+const v=calc(b,m,r,st);
+
+h+=`<tr class="c" data-b="${b}" data-m="${mi}" data-r="${r}">
+<td>${b} ${m.n}</td>
+<td>${r}GB</td>
+${v.map(x=>`<td>${x}</td>`).join("")}
+</tr>`;
+}
+
+}));
+
+$("tb").innerHTML=
+h||`<tr><td colspan="8">Koi model nahi mila</td></tr>`;
+}
+
+$("tabs").onclick=e=>{
+const b=e.target.dataset.b;
+
+if(b){
+brand=b;
+tabs();
+models();
+}
+};
+
+$("model").onchange=rams;
+
+$("go").onclick=()=>{
+const m=DATA[brand][$("model").value];
+const ram=+$("ram").value;
+
+show(brand,m,ram);
+};
+
+$("style").onchange=()=>{
+table();
+if(last)show(last.b,last.m,last.ram);
+};
+
+$("q").oninput=table;
+
+$("tb").onclick=e=>{
+const tr=e.target.closest("tr.c");
+
+if(!tr)return;
+
+brand=tr.dataset.b;
+tabs();
+models();
+
+$("model").value=tr.dataset.m;
+rams();
+
+$("ram").value=tr.dataset.r;
+
+show(
+brand,
+DATA[brand][tr.dataset.m],
++tr.dataset.r
+);
+};
+
+$("copy").onclick=()=>{
+if(!last)return;
+
+const t=
+`${last.b} ${last.m.n} (${last.ram}GB)\n`+
+KEYS.map((k,i)=>`${k}: ${last.v[i]}`).join("\n");
+
+(navigator.clipboard?
+navigator.clipboard.writeText(t):
+Promise.reject()
+)
+.then(()=>$("copy").textContent="✅ Copied!")
+.catch(()=>$("copy").textContent="Copy fail");
+
+setTimeout(()=>
+$("copy").textContent="📋 Copy Settings",1500);
+};
+
+const txt=()=>last?
+`🎯 Free Fire Sensi\n${last.b} ${last.m.n} (${last.ram}GB)\n`+
+KEYS.map((k,i)=>`${k}: ${last.v[i]}`).join("\n")
+:"";
+
+$("copy").onclick=()=>{
+navigator.clipboard.writeText(txt())
+.then(()=>$("copy").textContent="✅ Copied!")
+.catch(()=>$("copy").textContent="Copy fail");
+
+setTimeout(()=>
+$("copy").textContent="📋 Copy Settings",1500);
+};
+
+$("wa").onclick=()=>
+window.open(
+"https://wa.me/?text="+encodeURIComponent(txt()),
+"_blank"
+);
+
+const re=()=>{
+table();
+if(last)show(last.b,last.m,last.ram,1);
+};
+
+$("style").onchange=re;
+
+$("fb").onchange=table;
+$("fr").onchange=table;
+
+let n=0,c=0;
+
+for(const b in DATA)
+DATA[b].forEach(m=>{
+n++;
+c+=m.r.length;
+});
+
+$("st").innerHTML=
+`<div><b>4</b>Brands</div>
+<div><b>${n}</b>Models</div>
+<div><b>${c}</b>RAM Variants</div>`;
+
+tabs();
+models();
+table();
+</script>
+
+</body>
+</html>
